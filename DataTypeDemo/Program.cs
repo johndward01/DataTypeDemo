@@ -6,6 +6,14 @@ namespace DataTypeDemo
     {
         static void Main(string[] args)
         {
+            int x; //Declaring a variable
+
+            x = 0; //Initializing a variable
+
+            int balance = 0; //Declaring and initializing a variable
+
+            //-----------------------------------------------------------------------------------------------------------------------------------
+
             byte byteMin = 0; //8-bit unsigned integer
             byte byteMax = 255; //8-bit unsigned integer
             
@@ -23,31 +31,32 @@ namespace DataTypeDemo
 
             //https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals
             //--------------------------------------------------------------------------------------------------------------------------------------------
-            //The value of unsigned integers, long, float, double, and decimal type must be suffixed by u,l,f,d, and m, respectively.
-
+            //The value of unsigned integers, long, float, and decimal type must be suffixed by u,l,f, and m.
+            //                                                                                          U,L,F, and M
             uint uIntMin = 0; //32-bit unsigned integer
             uint uIntMax = 4294967295; //32-bit unsigned integer
             uint uIntExample = 100u;
 
             long longMin = -9223372036854775808; //64-bit unsigned integer
             long longMax = 9223372036854775807; //64-bit unsigned integer
-            long longExample = 45755452222222l; // lower case L 
+            long longExample = 45755452222222L; // use uppercase L because lowercase l & 1 look almost identical
 
             ulong uLongMin = 0; //64-bit unsigned integer
             ulong uLongMax = 18446744073709551615; //64-bit unsigned integer
-            ulong uLongExample = 45755452222222ul;
+            ulong uLongExample = 45755452222222UL;
 
 
             float floatMin = Single.MinValue; // -3.402823e38 32-bit Single-precision floating point type
             float floatMax = Single.MaxValue; // 3.402823e38 32-bit Single-precision floating point 
-            float floatExample = 0.0F;
+            float floatExample = 0.0f;
 
             double doubleMin = Double.MinValue; // -1.7976931348623157E+308 64-bit Double-precision floating point type
             double doubleMax = Double.MaxValue; // 1.7976931348623157E+308 64-bit Double-precision floating point 
-            double doubleExample = 0.00000D;
+            double doubleExample = 0.00000; //You do not need the d\D for Double
 
-            decimal decimalMin = Decimal.MinValue; //79228162514264337593543950335
-            decimal decimalMax = Decimal.MaxValue; //-
+
+            decimal decimalMin = Decimal.MinValue; //-79228162514264337593543950335 128-bit 
+            decimal decimalMax = Decimal.MaxValue; //79228162514264337593543950335
             decimal decimalExample = 0.0000001M;
             //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -67,22 +76,26 @@ namespace DataTypeDemo
 
             DateTime dateTimeExample = DateTime.Now; //0:00:00am 1/1/01 to 11:59:59pm 12/31/9999
 
-            /*Conversions
-             * 
+            //-----------------------------------------------------------------------------------------------------------------------------------------------------
+            //Console.WriteLine(decimalMin);
+            /*
+             Conversions             
                 The values of certain data types are automatically converted to different data types in C#. This is called an implicit conversion.
 
-                Example: Implicit Conversion               */
+                Example: Implicit Conversion               
                 int i = 345;
                 float f = i;
 
                 Console.WriteLine(f); //output: 345
 
-            /*In the above example, the value of an integer variable i is assigned to the variable of float type f because this conversion operation is predefined in C#.
+            In the above example, the value of an integer variable i is assigned to the variable of float type f because this conversion operation is predefined in C#.
+
+            -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
             The following is an implicit data type conversion table.
 
-             */
-            /*  Implicit Conversion From ->  To
+              Implicit Conversion From  ---->   To
+            __________________________________________________________________________________________________________________________________________________________
                 |sbyte                 |     | short,      |int,        |long,       |float,      |double,     |decimal
                 |byte                  |     | short,      |ushort,     |int,        |uint,       |long,       |ulong,      |float,       |double,      |decimal
                 |short                 |     | int,        |long,       |float,      |double,     |decimal     |            |             |             |
@@ -92,12 +105,18 @@ namespace DataTypeDemo
                 |long                  |     | float,      |double,     |decimal     |            |            |            |             |             |
                 |ulong                 |     | float,      |double,     |decimal     |            |            |            |             |             |
                 |char                  |     | ushort,     |int,        |uint,       |long,       |ulong,      |float,      |double,      |decimal      |
-                |float                 |     | Double   */    
+                |float                 |     | Double      |            |            |            |            |            |             |             |   
+            ___________________________________________________________________________________________________________________________________________________________           */
 
 
 
 
 
+
+
+
+
+            
         }
 
     }
